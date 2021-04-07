@@ -1,7 +1,8 @@
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
-import { ArrowDown } from 'react-feather'
-import { CardBody, ArrowDownIcon, Button, IconButton, Text } from '@pancakeswap-libs/uikit'
+import ArrowDown from '@material-ui/icons/ArrowDownward';
+import { CardBody, ArrowDownIcon, IconButton } from '@pancakeswap-libs/uikit'
+import { Typography, Button } from '@material-ui/core';
 import { ThemeContext } from 'styled-components'
 import AddressInputPanel from 'components/AddressInputPanel'
 import Card, { GreyCard } from 'components/Card'
@@ -309,7 +310,7 @@ const Swap = () => {
                 <AutoRow justify={isExpertMode ? 'space-between' : 'center'} style={{ padding: '0 1rem' }}>
                   <ArrowWrapper clickable>
                     <IconButton
-                      variant="tertiary"
+                      // variant="tertiary"
                       onClick={() => {
                         setApprovalSubmitted(false) // reset 2 step UI for approvals
                         onSwitchTokens()
@@ -346,7 +347,7 @@ const Swap = () => {
                 <>
                   <AutoRow justify="space-between" style={{ padding: '0 1rem' }}>
                     <ArrowWrapper clickable={false}>
-                      <ArrowDown size="16" color={theme.colors.textSubtle} />
+                      <ArrowDown color={theme.colors.textSubtle} />
                     </ArrowWrapper>
                     <LinkStyledButton id="remove-recipient-button" onClick={() => onChangeRecipient(null)}>
                       - Remove send
@@ -361,7 +362,7 @@ const Swap = () => {
                   <AutoColumn gap="4px">
                     {Boolean(trade) && (
                       <RowBetween align="center">
-                        <Text fontSize="14px">{TranslateString(1182, 'Price')}</Text>
+                        <Typography >{TranslateString(1182, 'Price')}</Typography>
                         <TradePrice
                           price={trade?.executionPrice}
                           showInverted={showInverted}
@@ -371,8 +372,8 @@ const Swap = () => {
                     )}
                     {allowedSlippage !== INITIAL_ALLOWED_SLIPPAGE && (
                       <RowBetween align="center">
-                        <Text fontSize="14px">{TranslateString(88, 'Slippage Tolerance')}</Text>
-                        <Text fontSize="14px">{allowedSlippage / 100}%</Text>
+                        <Typography >{TranslateString(88, 'Slippage Tolerance')}</Typography>
+                        <Typography >{allowedSlippage / 100}%</Typography>
                       </RowBetween>
                     )}
                   </AutoColumn>
@@ -389,7 +390,7 @@ const Swap = () => {
                 </Button>
               ) : noRoute && userHasSpecifiedInputOutput ? (
                 <GreyCard style={{ textAlign: 'center' }}>
-                  <Text mb="4px">{TranslateString(1194, 'Insufficient liquidity for this trade.')}</Text>
+                  <Typography mb="4px">{TranslateString(1194, 'Insufficient liquidity for this trade.')}</Typography>
                 </GreyCard>
               ) : showApproveFlow ? (
                 <RowBetween>
