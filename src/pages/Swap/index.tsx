@@ -1,5 +1,5 @@
-import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
+import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import ArrowDown from '@material-ui/icons/ArrowDownward';
 import { CardBody, ArrowDownIcon, IconButton } from '@pancakeswap-libs/uikit'
 import { Typography, Button } from '@material-ui/core';
@@ -429,7 +429,7 @@ const Swap = () => {
                     disabled={
                       !isValid || approval !== ApprovalState.APPROVED || (priceImpactSeverity > 3 && !isExpertMode)
                     }
-                    variant={isValid && priceImpactSeverity > 2 ? 'secondary' : 'primary'}
+                    color={isValid && priceImpactSeverity > 2 ? 'secondary' : 'primary'}
                   >
                     {priceImpactSeverity > 3 && !isExpertMode
                       ? `Price Impact High`
@@ -453,7 +453,7 @@ const Swap = () => {
                   }}
                   id="swap-button"
                   disabled={!isValid || (priceImpactSeverity > 3 && !isExpertMode) || !!swapCallbackError}
-                  variant={isValid && priceImpactSeverity > 2 && !swapCallbackError ? 'secondary' : 'primary'}
+                  color={isValid && priceImpactSeverity > 2 && !swapCallbackError ? 'secondary' : 'primary'}
                   width="100%"
                 >
                   {swapInputError ||
