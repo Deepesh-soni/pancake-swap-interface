@@ -390,7 +390,7 @@ const Swap = () => {
                 </Button>
               ) : noRoute && userHasSpecifiedInputOutput ? (
                 <GreyCard style={{ textAlign: 'center' }}>
-                  <Typography mb="4px">{TranslateString(1194, 'Insufficient liquidity for this trade.')}</Typography>
+                  <Typography>{TranslateString(1194, 'Insufficient liquidity for this trade.')}</Typography>
                 </GreyCard>
               ) : showApproveFlow ? (
                 <RowBetween>
