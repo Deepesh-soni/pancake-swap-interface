@@ -3,7 +3,7 @@ import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import ArrowDown from '@material-ui/icons/ArrowDownward';
 import { CardBody, ArrowDownIcon, IconButton } from '@pancakeswap-libs/uikit'
 import { Typography, Button } from '@material-ui/core';
-import { ThemeContext } from 'styled-components'
+// import { ThemeContext } from 'styled-components'
 import AddressInputPanel from 'components/AddressInputPanel'
 import Card, { GreyCard } from 'components/Card'
 import { AutoColumn } from 'components/Column'
@@ -63,7 +63,7 @@ const Swap = () => {
   }, [])
 
   const { account } = useActiveWeb3React()
-  const theme = useContext(ThemeContext)
+  // const theme = useContext(ThemeContext)
 
   const [isExpertMode] = useExpertModeManager()
 
