@@ -454,7 +454,7 @@ const Swap = () => {
                   id="swap-button"
                   disabled={!isValid || (priceImpactSeverity > 3 && !isExpertMode) || !!swapCallbackError}
                   color={isValid && priceImpactSeverity > 2 && !swapCallbackError ? 'secondary' : 'primary'}
-                  width="100%"
+                  // width="100%"
                 >
                   {swapInputError ||
                     (priceImpactSeverity > 3 && !isExpertMode
