@@ -347,7 +347,7 @@ const Swap = () => {
                 <>
                   <AutoRow justify="space-between" style={{ padding: '0 1rem' }}>
                     <ArrowWrapper clickable={false}>
-                      <ArrowDown color={theme.colors.textSubtle} />
+                      <ArrowDown/>
                     </ArrowWrapper>
                     <LinkStyledButton id="remove-recipient-button" onClick={() => onChangeRecipient(null)}>
                       - Remove send

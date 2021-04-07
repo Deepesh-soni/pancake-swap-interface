@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import styled from 'styled-components'
-import { Text } from '@pancakeswap-libs/uikit'
+import { Typography } from '@material-ui/core';
 import useI18n from 'hooks/useI18n'
 import useENS from '../../hooks/useENS'
 import { useActiveWeb3React } from '../../hooks'
@@ -100,9 +100,9 @@ export default function AddressInputPanel({
         <InputContainer>
           <AutoColumn gap="md">
             <RowBetween>
-              <Text color="textSubtle" fontWeight={500} fontSize="14px">
+              <Typography color='primary' variant='h3'>
                 {TranslateString(1138, 'Recipient')}
-              </Text>
+              </Typography>
               {address && chainId && (
                 <ExternalLink href={getBscScanLink(chainId, name ?? address, 'address')} style={{ fontSize: '14px' }}>
                   {TranslateString(116, '(View on BscScan)')}
