@@ -95,7 +95,7 @@ export default function Nav() {
   const TranslateString = useI18n()
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+  const handleChange = (event: React.ChangeEvent<string, unknown>, newValue: number) => {
     setValue(newValue);
   };
 

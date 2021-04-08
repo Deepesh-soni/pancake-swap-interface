@@ -9,7 +9,7 @@ import Card, { GreyCard } from 'components/Card'
 import { AutoColumn } from 'components/Column'
 import ConfirmSwapModal from 'components/swap/ConfirmSwapModal'
 import CurrencyInputPanel from 'components/CurrencyInputPanel'
-import CardNav from 'components/CardNav'
+// import CardNav from 'components/CardNav'
 import { AutoRow, RowBetween } from 'components/Row'
 import AdvancedSwapDetailsDropdown from 'components/swap/AdvancedSwapDetailsDropdown'
 import confirmPriceImpactWithoutFee from 'components/swap/confirmPriceImpactWithoutFee'
@@ -269,7 +269,7 @@ const Swap = () => {
         transactionType={syrupTransactionType}
         onConfirm={handleConfirmSyrupWarning}
       />
-      <CardNav />
+      {/* <CardNav /> */}
       <AppBody>
         <Wrapper id="swap-page">
           <ConfirmSwapModal
