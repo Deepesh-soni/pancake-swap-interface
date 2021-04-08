@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import ArrowDown from '@material-ui/icons/ArrowDownward';
 import { CardBody, ArrowDownIcon, IconButton } from '@pancakeswap-libs/uikit'
